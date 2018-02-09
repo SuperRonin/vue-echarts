@@ -2,7 +2,7 @@
   <div class="tabbar">
       <ul class="tabbar-list">
         <li>
-            <router-link :to="{ path: '/', activeClass: 'red'}"  replace exact><img src="../assets/icon_home_sel.png" alt=""><p>首页</p></router-link>
+            <router-link :to="{ path: '/', activeClass: 'red'}" :class="{'red' : isFirst}"  replace exact><img src="../assets/icon_home_sel.png" alt=""><p>首页</p></router-link>
         </li>
         <li>
             <router-link :to="{ path: '/sec', activeClass: 'red'}"  replace exact><img src="../assets/icon_home_sel.png" alt=""><p>用户分析</p></router-link>   
@@ -55,4 +55,15 @@
     }
 }
 </style>
+
+<script>
+export default {
+  data () {
+      return {
+          isFirst: true
+      }
+  }
+}
+</script>
+
 
